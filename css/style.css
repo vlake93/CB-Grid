@@ -193,51 +193,60 @@ body {
   color: black;
 }
 
-.white-pawn-e4 {
+.white-pawn-five {
   animation: twoUp 1.5s ease 1 forwards, taken 1.5s 17s ease 1 forwards;
 }
 
-.black-pawn-e5 {
+.black-pawn-five {
   animation: twoDown 1.5s 1.5s ease 1 forwards,
     e5Take 1.5s 13.5s ease 1 forwards, taken 1.5s 15.5s ease 1 forwards;
 }
 
-.white-pawn-f4 {
+.white-pawn-six {
   animation: twoUp 1.5s 3s ease 1 forwards;
 }
 
-.black-bishop-c5 {
+.black-bishop-right {
   animation: threeDiagDownLeft 1.5s 4.5s ease 1 forwards,
     bishopBack 1.5s 19.5s ease 1 forwards;
 }
 
-.white-knight-g3 {
+.white-knight-right {
   animation: knightUpLeft 1.5s 6s ease 1 forwards;
 }
 
-.black-pawn-d6 {
+.black-pawn-four {
   animation: oneDown 1.5s 7.5s ease 1 forwards;
 }
 
-.white-pawn-c3 {
+.white-pawn-three {
   animation: oneUp 1.5s 9s ease 1 forwards, c3Take 1.5s 15s ease 1 forwards;
 }
 
-.black-queen-e7 {
+.black-queen {
   animation: oneDiagDownRight 1.5s 10.5s ease 1 forwards,
-    e7Take 1.5s 16.5s ease 1 forwards;
+    e7Take 1.5s 16.5s ease 1 forwards, queenBack 1.5s 25.5s ease 1 forwards;
 }
 
-.white-pawn-d4 {
+.white-pawn-four {
   animation: twoUp 1.5s 12s ease 1 forwards, taken 1.5s 14s ease 1 forwards;
 }
 
-.white-king-f2 {
+.white-king {
   animation: oneUpRight 1.5s 18s ease 1 forwards;
 }
 
 .white-bishop-right {
   animation: fourDiagUpLeft 1.5s 21s ease 1 forwards;
+}
+
+.black-king {
+  animation: oneLeft 1.5s 22.5s ease 1 forwards;
+}
+
+.white-rook-right {
+  animation: threeRight 1.5s 24s ease 1 forwards,
+    rookCheckmate 1.5s 27s ease 1 forwards;
 }
 
 /* //////////////////////////////// */
@@ -256,6 +265,12 @@ body {
   }
 }
 
+@keyframes oneLeft {
+  100% {
+    transform: translate(-12rem, 0);
+  }
+}
+
 @keyframes oneDown {
   100% {
     transform: translate(0, 12rem);
@@ -271,6 +286,12 @@ body {
 @keyframes twoDown {
   100% {
     transform: translate(0, 24rem);
+  }
+}
+
+@keyframes threeRight {
+  100% {
+    transform: translate(-36rem, 0);
   }
 }
 
@@ -332,6 +353,18 @@ body {
 @keyframes bishopBack {
   100% {
     transform: translate(-48rem, 24rem);
+  }
+}
+
+@keyframes queenBack {
+  100% {
+    transform: translate(36rem, 24rem);
+  }
+}
+
+@keyframes rookCheckmate {
+  100% {
+    transform: translate(-36rem, -84rem);
   }
 }
 
