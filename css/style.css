@@ -25,7 +25,6 @@ body {
   display: grid;
   grid-template-columns: repeat(8, 12rem);
   grid-template-rows: repeat(8, 12rem);
-  border: 5px solid brown;
   box-shadow: 1px 1px 30px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -43,4 +42,185 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+.white-board p,
+.black-board p {
+  font-size: 8rem;
+}
+
+.chess-piece {
+  /* color: white;
+  -webkit-text-stroke: 0.12rem black; */
+  height: 10rem;
+}
+
+.one::after {
+  content: "1";
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.two::after {
+  content: "2";
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  font-size: 2rem;
+  color: black;
+}
+
+.three::after {
+  content: "3";
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.four::after {
+  content: "4";
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  font-size: 2rem;
+  color: black;
+}
+
+.five::after {
+  content: "5";
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.six::after {
+  content: "6";
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  font-size: 2rem;
+  color: black;
+}
+
+.seven::after {
+  content: "7";
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.eight::after {
+  content: "8";
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  font-size: 2rem;
+  color: black;
+}
+
+.letter-a::before {
+  content: "a";
+  position: absolute;
+  bottom: 0;
+  right: 0.5rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.letter-b::after {
+  content: "b";
+  position: absolute;
+  bottom: 0;
+  right: 0.5rem;
+  font-size: 2rem;
+  color: black;
+}
+
+.letter-c::after {
+  content: "c";
+  position: absolute;
+  bottom: 0;
+  right: 0.5rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.letter-d::after {
+  content: "d";
+  position: absolute;
+  bottom: 0;
+  right: 0.5rem;
+  font-size: 2rem;
+  color: black;
+}
+
+.letter-e::after {
+  content: "e";
+  position: absolute;
+  bottom: 0;
+  right: 0.5rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.letter-f::after {
+  content: "f";
+  position: absolute;
+  bottom: 0;
+  right: 0.5rem;
+  font-size: 2rem;
+  color: black;
+}
+
+.letter-g::after {
+  content: "g";
+  position: absolute;
+  bottom: 0;
+  right: 0.5rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.letter-h::after {
+  content: "h";
+  position: absolute;
+  bottom: 0;
+  right: 0.5rem;
+  font-size: 2rem;
+  color: black;
+}
+
+/* MEDIA */
+
+@media (max-width: 64em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 48.125em) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media (max-width: 38.5em) {
+  html {
+    font-size: 35%;
+  }
+}
+
+@media (max-width: 33.75em) {
+  html {
+    font-size: 30%;
+  }
 }
