@@ -37,22 +37,16 @@ body {
 }
 
 .white-board {
-  background-image: url(../assets/white.jpg);
+  background-image: url(../assets/white-3.jpg);
   display: grid;
   justify-content: center;
   align-items: center;
   position: relative;
 }
 
-.white-board p,
-.black-board p {
-  font-size: 8rem;
-}
-
 .chess-piece {
-  /* color: white;
-  -webkit-text-stroke: 0.12rem black; */
-  height: 10rem;
+  height: 12rem;
+  z-index: 1;
 }
 
 .one::after {
@@ -199,7 +193,151 @@ body {
   color: black;
 }
 
+.white-pawn-e4 {
+  animation: twoUp 1.5s ease 1 forwards, taken 1.5s 17s ease 1 forwards;
+}
+
+.black-pawn-e5 {
+  animation: twoDown 1.5s 1.5s ease 1 forwards,
+    e5Take 1.5s 13.5s ease 1 forwards, taken 1.5s 15.5s ease 1 forwards;
+}
+
+.white-pawn-f4 {
+  animation: twoUp 1.5s 3s ease 1 forwards;
+}
+
+.black-bishop-c5 {
+  animation: threeDiagDownLeft 1.5s 4.5s ease 1 forwards,
+    bishopBack 1.5s 19.5s ease 1 forwards;
+}
+
+.white-knight-g3 {
+  animation: knightUpLeft 1.5s 6s ease 1 forwards;
+}
+
+.black-pawn-d6 {
+  animation: oneDown 1.5s 7.5s ease 1 forwards;
+}
+
+.white-pawn-c3 {
+  animation: oneUp 1.5s 9s ease 1 forwards, c3Take 1.5s 15s ease 1 forwards;
+}
+
+.black-queen-e7 {
+  animation: oneDiagDownRight 1.5s 10.5s ease 1 forwards,
+    e7Take 1.5s 16.5s ease 1 forwards;
+}
+
+.white-pawn-d4 {
+  animation: twoUp 1.5s 12s ease 1 forwards, taken 1.5s 14s ease 1 forwards;
+}
+
+.white-king-f2 {
+  animation: oneUpRight 1.5s 18s ease 1 forwards;
+}
+
+.white-bishop-right {
+  animation: fourDiagUpLeft 1.5s 21s ease 1 forwards;
+}
+
+/* //////////////////////////////// */
+/* ANIMATION */
+/* //////////////////////////////// */
+
+@keyframes oneUp {
+  100% {
+    transform: translate(0, -12rem);
+  }
+}
+
+@keyframes oneUpRight {
+  100% {
+    transform: translate(12rem, -12rem);
+  }
+}
+
+@keyframes oneDown {
+  100% {
+    transform: translate(0, 12rem);
+  }
+}
+
+@keyframes twoUp {
+  100% {
+    transform: translate(0, -24rem);
+  }
+}
+
+@keyframes twoDown {
+  100% {
+    transform: translate(0, 24rem);
+  }
+}
+
+@keyframes fourDiagUpLeft {
+  100% {
+    transform: translate(-48rem, -48rem);
+  }
+}
+
+@keyframes oneDiagDownRight {
+  100% {
+    transform: translate(12rem, 12rem);
+  }
+}
+
+@keyframes oneDiagDownLeft {
+  100% {
+    transform: translate(-12rem, -12rem);
+  }
+}
+
+@keyframes threeDiagDownLeft {
+  100% {
+    transform: translate(-36rem, 36rem);
+  }
+}
+
+@keyframes knightUpLeft {
+  100% {
+    transform: translate(-12rem, -24rem);
+  }
+}
+
+@keyframes taken {
+  100% {
+    opacity: 0;
+  }
+}
+
+/* CUSTOM */
+@keyframes e5Take {
+  100% {
+    transform: translate(-12rem, 36rem);
+  }
+}
+
+@keyframes c3Take {
+  100% {
+    transform: translate(12rem, -24rem);
+  }
+}
+
+@keyframes e7Take {
+  100% {
+    transform: translate(12rem, 48rem);
+  }
+}
+
+@keyframes bishopBack {
+  100% {
+    transform: translate(-48rem, 24rem);
+  }
+}
+
+/* //////////////////////////////// */
 /* MEDIA */
+/* //////////////////////////////// */
 
 @media (max-width: 64em) {
   html {
